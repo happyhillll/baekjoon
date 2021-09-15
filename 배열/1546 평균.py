@@ -12,3 +12,29 @@
 출력
 첫째 줄에 새로운 평균을 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10-2 이하이면 정답이다.
 '''
+n=int(input())  # 시험을 본 과목의 개수
+test_list=list(map(int,input().split()))
+max=max(test_list)  # 가장 높은 점수 찾기
+
+new_list=[]  #빈 리스트 생성
+for i in test_list : #입력받은 시험 점수를 하나씩 꺼내면서 
+    new_list.append(i/max*100) #새로운 점수 생성
+test_avg = sum(new_list)/n #시험의 평균을 구한다.
+print(test_avg)
+
+'''#다른 풀이
+n=int(input())
+test_list=list(map(float,input().split()))
+
+max=0
+for i in range(n):
+    if max<score[i]:
+        max=score[i]
+for i in range(n):
+    score[i]=(score[i]/max)*100
+
+sum=0
+for i in range(n):
+    sum+=score[i]
+print(sum/n)
+'''
