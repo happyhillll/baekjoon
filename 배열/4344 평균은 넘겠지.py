@@ -13,10 +13,10 @@
 c = int(input()) # 테스트 케이스의 개수
 for avg in range(c): 
     score = list(map(int,input().split()))
-    avg = sum(score[1:]/score[0]) #평균 구하기
-    cnt=0
-    for j in score[1:]:
-        if j > avg:
-            cnt += 1
-    rate = cnt/score[0]*100
-    print(f"{rate:.3f}%")
+    avg = sum(score[1:])/score[0] #평균 구하기
+    cnt=0    #학생 수 
+    for j in score[1:]:  # 점수를 하나씩 꺼내서 j에 저장
+        if j > avg:  #만약 j가 평균보다 크면
+            cnt += 1  # 학생 수에 1씩 더한다
+    rate = cnt/score[0]*100  #평균을 넘는 학생의 비율
+    print(f"{rate:.3f}%")  # 소숫점 3째자리 수 까지
