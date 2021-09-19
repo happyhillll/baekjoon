@@ -1,0 +1,5 @@
+kor=int(input("국어 점수: "))
+eng=int(input("영어 점수: "))
+math=int(input("수학 점수: "))
+print("총점: %.2f" % (kor+eng+math))
+print("평균: %.2f" % ((kor+eng+math)/3))
